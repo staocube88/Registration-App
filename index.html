@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <title>Registration App</title>
+</head>
+<body>
+
+    <div class="container mt-4">
+       
+        <h1 class="display-4 text-center">
+            <i class="fa fa-book-open text-primary"></i>Registration<span class="text-primary">List</span> App
+        </h1>
+
+        
+        <form id="register-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">E Mail</label>
+                <input type="email" id="email" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="phoneno">Phone Number</label>
+                <input type="text" id="phoneno" class="form-control" />
+            </div>
+
+            <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+        </form>
+
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="register-list">
+
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
