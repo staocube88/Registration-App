@@ -11,15 +11,15 @@ class Register{
 class UI {
 
 
-    static displayRegister(){
-        let register = Store.getRegister();
+    static displayRegisters(){
+        let registers = Store.getRegisters();
 
         registers.forEach((register) => UI.addRegisterToList(register));
 
        
     }
 
-    static addRegisterList(register){
+    static addRegisterToList(register){
         const list = document.querySelector('#register-list');
 
         const row = document.createElement('tr');
@@ -59,7 +59,7 @@ class UI {
         div.appendChild(document.createTextNode(message));
         
         const container = document.querySelector('.container');
-        const form = document.querySelector('#book-form');
+        const form = document.querySelector('#register-form');
         container.insertBefore(div,form);
 
        
@@ -82,17 +82,17 @@ class Store {
 
     static saveRegister(register){
         let registers;
-        registers = Store.getBooks();
+        registers = Store.getRegisters();
         registers.push(register);
         localStorage.setItem('registers',JSON.stringify(registers));
     }
 
     static removeRegister(phoneno){
-        const regsiters = Store.getRegisters();
+        const registers = Store.getRegisters();
 
-        regsiters.forEach((register, index) => {
+        registers.forEach((register, index) => {
           if(register.phoneno === phoneno) {
-            regsiters.splice(index, 1);
+            registers.splice(index, 1);
           }
         });
     
